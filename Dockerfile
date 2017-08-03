@@ -12,7 +12,7 @@ RUN apt-get -y update --fix-missing && \
     postgresql-server-dev-9.5 postgresql-9.5-postgis-2.2 postgresql-contrib-9.5 \
     apache2 php php-pgsql libapache2-mod-php php-pear php-db \
     python3-dev python3-pip python3-psycopg2 python3-tidylib phpunit \
-    php-intl git && \
+    php-intl git wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* /var/tmp/*
@@ -35,7 +35,7 @@ RUN echo "host all  all    0.0.0.0/0  trust" >> /etc/postgresql/9.5/main/pg_hba.
     echo "listen_addresses='*'" >> /etc/postgresql/9.5/main/postgresql.conf
 
 # Nominatim install
-ENV NOMINATIM_VERSION v.3.0.0
+ENV NOMINATIM_VERSION v3.0.0
 
 # clonig from git
 RUN git clone --recursive https://github.com/openstreetmap/Nominatim ./src
