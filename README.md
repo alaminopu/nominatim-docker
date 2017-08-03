@@ -5,7 +5,7 @@ Working container for [Nominatim](https://github.com/twain47/Nominatim).
 
 # Supported tags and respective `Dockerfile` links #
 
-- [`3.0.0`, `3.0`, `latest`  (*2.5/Dockerfile*)](https://github.com/mediagis/nominatim-docker/tree/master/3.0)
+- [`3.0.0`, `3.0`, `latest`  (*Dockerfile*)](https://github.com/alaminopu/nominatim-docker/blob/master/Dockerfile)
 
 
 Run [http://wiki.openstreetmap.org/wiki/Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim) in a docker container. Clones the current master and builds it. This is always the latest version, be cautious as it may be unstable.
@@ -54,4 +54,4 @@ If you want to run extra files inside notinatim wesite, put the file in the extr
 
 ---
 
-Inspired from [https://github.com/mediagis/nominatim-docker] (mediagis's nominatim docker)
+Inspired from [https://github.com/mediagis/nominatim-docker](mediagis's nominatim docker)
