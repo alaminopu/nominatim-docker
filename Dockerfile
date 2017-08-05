@@ -12,7 +12,7 @@ RUN apt-get -y update --fix-missing && \
     postgresql-server-dev-9.5 postgresql-9.5-postgis-2.2 postgresql-contrib-9.5 \
     apache2 php php-pgsql libapache2-mod-php php-pear php-db \
     python3-dev python3-pip python3-psycopg2 python3-tidylib phpunit \
-    php-intl git wget && \
+    php-intl git wget curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* /var/tmp/*
@@ -50,7 +50,7 @@ RUN mkdir ./src/website/extra
 
 # make
 RUN cd ./src && git checkout $NOMINATIM_VERSION && git submodule update --recursive --init && \
-  ./autogen.sh && ./configure && make
+   mkdir build && cd build && cmake /app/src && make
 
 
 # Nominatim create site
