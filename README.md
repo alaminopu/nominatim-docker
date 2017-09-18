@@ -51,7 +51,3 @@ If you want a different update source, you will need to declare `CONST_Replicati
 # Extra
 
 If you want to run extra files inside notinatim wesite, put the file in the extra directory.
-
----
-
-Inspired from [https://github.com/mediagis/nominatim-docker](mediagis's nominatim docker)
